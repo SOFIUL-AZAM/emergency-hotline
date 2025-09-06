@@ -19,7 +19,7 @@
 <body class="bg-[#f5fff6]">
     <head>
         <!-- Navbar -->
-        <div class="flex justify-between items-center p-3 bg-white rounded-lg">
+        <div class="flex flex-col md:flex-row justify-between items-center p-3 bg-white rounded-lg">
             <div class="flex gap-3">
                 <div class="">
                     <img class="w-12 h-12" src="./assets/logo.png" alt="">
@@ -47,7 +47,7 @@
         </div>
 
         <!--  Hero section --> 
-        <div class="bg-gradient-to-r from-[#013122] via-[#006747] to-[#013223] w-full h-64 flex flex-col justify-center items-center text-center">
+        <div class="bg-gradient-to-r from-[#013122] via-[#006747] to-[#013223] md:w-full h-64 flex flex-col md:flex-col justify-center items-center text-center">
             <img class="w-18 h-17" src="./assets/logo.png" alt="">
             <h2 class="font-bold text-white text-xl">Emergency Service Directory</h2>
             <p class="text-white text-sm">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
@@ -55,8 +55,8 @@
     </head>
     <main>
         <!-- card Section -->
-         <div class="grid grid-flow-col gap-4 ml-4 mt-5">
-            <div class="grid grid-cols-3 gap-4 mr-2" >
+         <div class="gird grid-cols-1 md:grid grid-flow-col gap-4 ml-4 mt-5">
+            <div class="gird grid-cols-1 md:grid grid-cols-3 gap-4 mr-2 mb-7" >
                 <!-- one card -->
                 <div class="w-[310px]  p-4 bg-white rounded-lg">
                     <div class="flex justify-between items-center">
@@ -85,7 +85,7 @@
                 </div>
 
                 <!-- 2 card -->
-                 <div class="w-[310px]  p-4 bg-white rounded-lg">
+                 <div class=" w-[310px]  p-4 bg-white rounded-lg">
                     <div class="flex justify-between items-center">
                         <img class="w-4 h-3" src="./assets/police.png" alt="">
                         <button class="btn btn-square">
@@ -112,7 +112,7 @@
                 </div>
 
                 <!-- 3 card -->
-                 <div class="w-[310px]  p-4 bg-white rounded-lg">
+                 <div class=" w-[310px]  p-4 bg-white rounded-lg">
                     <div class="flex justify-between items-center">
                         <img class="w-4 h-3" src="./assets/fire-service.png" alt="">
                         <button class="btn btn-square">
@@ -139,7 +139,7 @@
                 </div>
 
                 <!-- 4 -->
-                 <div class="w-[310px]  p-4 bg-white rounded-lg">
+                 <div class=" w-[310px]  p-4 bg-white rounded-lg">
                     <div class="flex justify-between items-center">
                         <img class="w-4 h-3" src="./assets/ambulance.png" alt="">
                         <button class="btn btn-square">
@@ -166,7 +166,7 @@
                 </div>
 
                 <!-- 5 -->
-                 <div class="w-[310px]  p-4 bg-white rounded-lg">
+                 <div class=" w-[310px]  p-4 bg-white rounded-lg">
                     <div class="flex justify-between items-center">
                         <img class="w-4 h-3" src="./assets/emergency.png" alt="">
                         <button class="btn btn-square">
@@ -193,7 +193,7 @@
                 </div>
 
                 <!-- 6 -->
-                 <div class="w-[310px]  p-4 bg-white rounded-lg">
+                 <div class=" w-[310px]  p-4 bg-white rounded-lg">
                     <div class="flex justify-between items-center">
                         <img class="w-4 h-3" src="./assets/emergency.png" alt="">
                         <button class="btn btn-square">
@@ -220,7 +220,7 @@
                 </div>
 
                 <!-- 7 -->
-                 <div class="w-[310px]  p-4 bg-white rounded-lg">
+                 <div class=" w-[310px]  p-4 bg-white rounded-lg">
                     <div class="flex justify-between items-center">
                         <img class="w-4 h-3" src="./assets/emergency.png" alt="">
                         <button class="btn btn-square">
@@ -247,7 +247,7 @@
                 </div>
 
                 <!-- 8 -->
-                 <div class="w-[310px]  p-4 bg-white rounded-lg">
+                 <div class=" w-[310px]  p-4 bg-white rounded-lg">
                     <div class="flex justify-between items-center">
                         <img class="w-4 h-3" src="./assets/emergency.png" alt="">
                         <button class="btn btn-square">
@@ -274,7 +274,7 @@
                 </div>
 
                 <!-- 9 -->
-                 <div class="w-[310px]  p-4 bg-white rounded-lg">
+                 <div class=" w-[310px]  p-4 bg-white rounded-lg">
                     <div class="flex justify-between items-center">
                         <img class="w-4 h-3" src="./assets/emergency.png" alt="">
                         <button class="btn btn-square">
@@ -302,7 +302,7 @@
             </div>
 
             <!-- call history -->
-             <div class="flex justify-between items-start w-[300px] bg-white rounded-lg p-2">
+             <div class="flex justify-between items-start w-[330px] bg-white rounded-lg p-2 mb-7">
                 <div class="flex items-center gap-3">
                     <i class="fa-regular fa-clock"></i>
                     <h2>Call History</h2>
@@ -313,5 +313,8 @@
              </div>
          </div>
     </main>
+
+    <!-- script -->
+     <script src="script.js"></script>
 </body>
 </html>
