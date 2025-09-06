@@ -89,7 +89,7 @@ clearBtn.addEventListener('click',function(e){
 })
 
 
-// copy button
+// copy and count
 
 function getCountCopy(){
     let countCopy = parseInt(document.getElementById('count-copy').innerText)
