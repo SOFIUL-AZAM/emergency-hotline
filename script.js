@@ -1,5 +1,5 @@
 
-// heart value count
+// function heart value count
 function getValue(){
 
     let countHeart = parseInt(document.getElementById("count-heart").innerText)
@@ -8,6 +8,21 @@ function getValue(){
     document.getElementById("count-heart").innerText = countHeart
 
 }
+
+// function count coin
+function getCountCoin(){
+    let countCoin = parseInt(document.getElementById('count-coin').innerText)
+    
+    if(countCoin >=20){
+        countCoin= countCoin - 20;
+        document.getElementById('count-coin').innerText=countCoin
+        return true;
+    }
+    else{
+        alert('❌ You don’t have enough coins. To make a call, you need at least 20 coins.')
+        return false;
+    }
+} 
 
 let hearts = document.getElementsByClassName('heart')
 
@@ -26,9 +41,13 @@ let callButton = document.getElementById('callHistoryList')
 
 let clearBtn = document.getElementById('clearHistory')
 
+let coins = document.getElementById('count-coin')
+
 for(let callButton of callButtons){
     callButton.addEventListener("click",function(e){
         e.preventDefault()
+
+        if(getCountCoin()){
 
         let cardDiv = this.parentElement.parentElement
 
@@ -36,6 +55,9 @@ for(let callButton of callButtons){
         let cardNumber = cardDiv.getElementsByClassName('mob-num')[0].innerText
 
         alert('📞 calling ' + cardTitle+ ' ' + cardNumber)
+
+
+        // call history
 
         let date = new Date()
         let currentTime = date.toLocaleTimeString();
@@ -53,7 +75,8 @@ for(let callButton of callButtons){
                 </div>
         
         `
-        callHistoryList.appendChild(historyDiv)
+            callHistoryList.appendChild(historyDiv)
+        }
 
     })
 }
@@ -64,4 +87,36 @@ clearBtn.addEventListener('click',function(e){
 
     callHistoryList.innerHTML='';
 })
+
+
+// copy button
+
+function getCountCopy(){
+    let countCopy = parseInt(document.getElementById('count-copy').innerText)
+    countCopy++
+    
+    document.getElementById('count-copy').innerText= countCopy
+}
+
+const copyButtons= document.getElementsByClassName('copy-btn')
+
+for(const copyButton of copyButtons){
+    copyButton.addEventListener('click',function(){
+
+        getCountCopy();
+
+        let div = this.parentElement.parentElement
+
+        let copyValue = div.getElementsByClassName('mob-num')[0].innerText
+
+        navigator.clipboard.writeText(copyValue)
+        .then(() =>{
+            alert('The number has been copied ' +copyValue)
+        })
+        .catch(() => {
+            alert('copy failed')
+        })
+        
+    })
+}
 
